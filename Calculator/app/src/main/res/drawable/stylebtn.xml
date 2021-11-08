@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <style android:name="stylebtn" android:parent="android:style/Widget.Button">
+        <item android:name="android:layout_width">0dp</item>
+        <item android:name="android:layout_height">70dp</item>
+        <item android:name="android:layout_margin">5dp</item>
+        <item android:name="android:layout_weight">1</item>
+        <item android:name="android:background=">@drawable/clear_equal</item>
+
+    </style>
+</selector>
