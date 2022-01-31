@@ -1,4 +1,4 @@
-package com.example.shopappf
+package com.example.shopappf.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,19 +8,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Toast
+import com.example.shopappf.R
+import com.example.shopappf.activity.ShopActivity
 import io.realm.Realm
-import io.realm.Realm.getApplicationContext
-import kotlinx.android.synthetic.main.fragment_register.*
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 
 class RegisterFragment : Fragment() {
 
     companion object{
-        fun newInstance(): LoginFragment{
+        fun newInstance(): LoginFragment {
             return LoginFragment()
         }
     }
@@ -54,31 +50,34 @@ class RegisterFragment : Fragment() {
       //  email = root.findViewById(R.id.PersonEmail)
       //  password = root.findViewById(R.id.PersonPassword)
         //  realm = Realm.getDefaultInstance()
+
+
         registerBTN = root.findViewById(R.id.buttonRegister)
 
 
-        registerBTN.setOnClickListener {
+        /*  registerBTN.setOnClickListener {
 
             val name = PersonName.text.toString().trim()
-            val surname = PersonSurname.text.toString().trim()
-            val email = PersonEmail.text.toString().trim()
-            val password = PersonPassword.text.toString().trim()
+             val surname = PersonSurname.text.toString().trim()
+             val email = PersonEmail.text.toString().trim()
+             val password = PersonPassword.text.toString().trim()
 
-            val response = RetrofitInstance.api.addUser(name, surname, email, password)
-            response.enqueue(object : Callback<userResponse> {
-                override fun onResponse(call: Call<userResponse>, response: Response<userResponse>)
-                {
-                    if (response.code() == 200) {
-                        Toast.makeText(getApplicationContext(), "User added Successfully", Toast.LENGTH_SHORT)
-                    }
-                }
+             val response = RetrofitInstance.api.addUser("id12",email, name, surname,password)
+             response.enqueue(object : Callback<userResponse> {
+                 override fun onResponse(call: Call<userResponse>, response: Response<userResponse>)
+                 {
+                     if (response.code() == 200) {
+                         Toast.makeText(getApplicationContext(), "User added Successfully", Toast.LENGTH_SHORT)
+                     }
+                 }
 
-                override fun onFailure(call: Call<userResponse>, t: Throwable?) {
-                    Toast.makeText(getApplicationContext(), "sth went wrong", Toast.LENGTH_SHORT)
-                }
-            })
+                 override fun onFailure(call: Call<userResponse>, t: Throwable?) {
+                     Toast.makeText(getApplicationContext(), "sth went wrong", Toast.LENGTH_SHORT)
+                 }
+             })
 
-        }
+         }*/
+
         return inflater.inflate(R.layout.fragment_register, container, false)
     }
 

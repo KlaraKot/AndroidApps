@@ -12,13 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ShopAppF">
         <activity
-            android:name=".ShopActivity"
-            android:parentActivityName=".MainActivity"/>
+            android:name=".activity.ShopActivity"
+            android:parentActivityName=".activity.MainActivity"/>
         <activity
-            android:name=".AccountPageActivity"
-            android:parentActivityName=".ShopActivity"/>
+            android:name=".activity.AccountPageActivity"
+            android:parentActivityName=".activity.ShopActivity"/>
         <activity
-            android:name=".MainActivity"
+            android:name=".tmpActivity"
+            android:parentActivityName=".activity.MainActivity"/>
+        <activity
+            android:name=".activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

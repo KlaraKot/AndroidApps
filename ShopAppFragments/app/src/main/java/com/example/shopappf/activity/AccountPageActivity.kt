@@ -1,13 +1,17 @@
-package com.example.shopappf
+package com.example.shopappf.activity
 
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import com.example.shopappf.fragments.AboutFragment
+import com.example.shopappf.fragments.AccountFragment
+import com.example.shopappf.fragments.BasketFragments
+import com.example.shopappf.R
 
 class AccountPageActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.account_page_activity)
 
         val account = AccountFragment()
         val basket = BasketFragments()
