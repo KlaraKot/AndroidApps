@@ -35,7 +35,6 @@
         android:id="@+id/btnGoToShop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="goToShop"
         android:text="shop"
         android:textColor="@color/black"
         android:textStyle="italic"

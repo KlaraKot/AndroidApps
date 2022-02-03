@@ -1,16 +1,18 @@
 package com.example.shopappf.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
+import android.widget.EditText
+import androidx.fragment.app.Fragment
 import com.example.shopappf.R
-import com.example.shopappf.activity.ShopActivity
+import io.realm.Realm
 
 class LoginFragment : Fragment() {
+    private lateinit var email: EditText
+    private lateinit var password:EditText
+    private lateinit var realm: Realm
 
     companion object{
         fun newInstance(): LoginFragment {
@@ -20,17 +22,37 @@ class LoginFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View?{
 
-        val root: View = inflater!!.inflate(R.layout.fragment_login, container, false)
-        val button1 : Button = root.findViewById<Button>(R.id.loginBTN)
+        val root: View = inflater.inflate(R.layout.fragment_login, container, false)
+        //val loginButton : Button = root.findViewById<Button>(R.id.loginBTN)
+        email = root.findViewById(R.id.emailText)
+        password = root.findViewById(R.id.passwordText)
 
-        button1.setOnClickListener{
-             fun onClick(view: View){
-                 requireActivity().run{
-                     startActivity(Intent(this, ShopActivity::class.java))
+        val email = email.text.toString().trim()
+        val password = password.text.toString().trim()
 
-                 }
+/*
+
+        loginButton.setOnClickListener{
+            realm.beginTransaction()
+
+            realm.executeTransaction {
+
+                val result = realm.where(UserDB::class.java)
+                    .equalTo("email", email)
+                    .and()
+                    .equalTo("passwordHash", password)
+                    .findAll()
+
+                if(result != null){
+                    val i =  Intent(context, ShopActivity::class.java)
+                    startActivity(i)
+                }
+                else{
+                    //toast -> zły login lub hasło
+                }
             }
-        }
+        }*/
+
 
         return inflater.inflate(R.layout.fragment_login, container, false)
     }

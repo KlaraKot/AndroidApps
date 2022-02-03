@@ -16,7 +16,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/user_name"
+                android:id="@+id/product_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
@@ -28,28 +28,28 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/user_surname"
+                android:id="@+id/product_type"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/user_name"
+                android:layout_below="@+id/product_name"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="5dp"
                 android:layout_marginBottom="5dp"
-                android:textColor="@color/black"
-                 />
+                android:textColor="@color/black" />
 
             <TextView
-                android:id="@+id/user_email"
+                android:id="@+id/product_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/user_surname"
+                android:layout_below="@+id/product_type"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"
-                android:textColor="@color/black"
                 android:layout_marginEnd="5dp"
                 android:layout_marginBottom="5dp"
+                android:textColor="@color/black"
                 android:textSize="15sp" />
+            
 
 
         </RelativeLayout>

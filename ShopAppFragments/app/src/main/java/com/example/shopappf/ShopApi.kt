@@ -10,7 +10,7 @@ interface ShopApi {
 
 
 
-    @GET("products")
+    @GET("get/tea/all")
     @Headers("Content-Type: application/json")
     fun getProducts() : Observable<List<ProductDB>>
 

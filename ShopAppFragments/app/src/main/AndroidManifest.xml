@@ -12,14 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ShopAppF">
         <activity
+            android:name=".activity.LoginActivity"
+            android:parentActivityName=".activity.MainActivity"/>
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:parentActivityName=".activity.MainActivity"/>
+        <activity
             android:name=".activity.ShopActivity"
             android:parentActivityName=".activity.MainActivity"/>
         <activity
             android:name=".activity.AccountPageActivity"
             android:parentActivityName=".activity.ShopActivity"/>
-        <activity
-            android:name=".tmpActivity"
-            android:parentActivityName=".activity.MainActivity"/>
+
         <activity
             android:name=".activity.MainActivity"
             android:exported="true">
